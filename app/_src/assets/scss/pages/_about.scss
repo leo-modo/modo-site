@@ -1,0 +1,168 @@
+#page-about {
+
+
+  padding: 50px 0 150px;
+
+  .tabs {
+    margin: 55px 0;
+  }
+
+  // History //
+  .history {
+    position: relative;
+
+    .items {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      position: relative;
+      z-index: 1;
+
+
+      &:after {
+        display: block;
+        position: absolute;
+        z-index: -1;
+
+        top: 0;
+        bottom: 0;
+        left: 50%;
+
+        width: 1px;
+
+        background: $color-orange;
+
+        content: '';
+      }
+    }
+
+    .item {
+      position: relative;
+
+      padding: 55px 0;
+
+      &:first-child,
+      &:last-child {
+        position: relative;
+
+        &:before {
+          display: block;
+          position: absolute;
+
+          left: 50%;
+
+          width: 11px;
+          height: 11px;
+
+          background: $color-orange;
+          border-radius: 30px;
+          transform: translateX(-5px);
+
+          content: '';
+        }
+
+        &:first-child {
+          padding-top: 70px;
+
+          &:before {
+            top: 0;
+          }
+        }
+
+        &:last-child {
+          padding-bottom: 70px;
+
+          &:before {
+            bottom: 0;
+          }
+
+          & > .content {
+            top: auto;
+            bottom: 0;
+          }
+        }
+      }
+
+      &:nth-child(odd){
+
+        & > .content {
+          left: calc(#{$max-site-width} / 2 * -1 + 65px);
+        }
+      }
+
+      &:nth-child(even){
+
+        & > .content {
+          right: calc(#{$max-site-width} / 2 * -1 + 130px);
+        }
+      }
+
+      &.is-active {
+
+        & > .date {
+          background: $color-orange-light;
+        }
+
+        & > .content {
+          display: block;
+        }
+      }
+
+      & > .date {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 130px;
+        height: 130px;
+
+        background: $color-white;
+        border-radius: 100px;
+        box-shadow: 0 0 20px rgba($color-orange, 0.3);
+
+        color: $color-blue;
+        font-size: 26px;
+        font-weight: bold;
+      }
+
+      & > .content {
+        display: none;
+        position: absolute;
+
+        top: 70px;
+
+        width: calc(#{$max-site-width} / 2 - 180px);
+
+        .date {
+          display: inline-block;
+
+          margin-bottom: 20px;
+          padding: 15px 20px;
+
+          border: 1px solid $color-orange;
+          border-radius: 4px;
+
+          color: $color-orange;
+          font-size: 22px;
+          font-weight: bold;
+        }
+
+        .title {
+          @extend %title-secondary;
+
+          margin-bottom: 15px;
+        }
+
+        .image img {
+          display: block;
+
+          max-width: 100%;
+
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+}

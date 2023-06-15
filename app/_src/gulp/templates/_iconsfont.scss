@@ -1,0 +1,52 @@
+@font-face {
+  font-family: '<%= fontName %>';
+  font-weight: normal;
+  font-style: normal;
+  src: url('<%= fontPath %><%= fontName %>.eot');
+  src: url('<%= fontPath %><%= fontName %>.woff2') format('woff2'),
+  url('<%= fontPath %><%= fontName %>.woff') format('woff'),
+  url('<%= fontPath %><%= fontName %>.ttf') format('truetype'),
+  url('<%= fontPath %><%= fontName %>.eot?#iefix') format('embedded-opentype');
+}
+
+%<%= cssClass %> {
+  display: inline-block;
+  speak: none;
+  font-family: '<%= fontName %>';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="<%= cssClass %>-"],
+[class*=" <%= cssClass %>-"] {
+  @extend %<%= cssClass %>;
+}
+
+@mixin icons($icon) {
+  content: $icon;
+  font-family: '<%= fontName %>';
+
+  @extend %<%= cssClass %>;
+}
+
+<%= glyphs.map(function(glyph) {
+  return '$icons-' + glyph.fileName + ': "\\' + glyph.codePoint + '";'
+}).join('\n') %>
+
+<%= glyphs.map(function(glyph) {
+  return '.icons-' + glyph.fileName + ':before { content: $icons-' + glyph.fileName + '; }'
+}).join('\n') %>

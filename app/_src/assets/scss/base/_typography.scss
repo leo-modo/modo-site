@@ -1,0 +1,52 @@
+body {
+  font-family: $font-primary, Arial, sans-serif;
+  font-weight: normal;
+  font-size: $base-font-size;
+  color: $color-base;
+  line-height: 1.5em;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/** LISTE **/
+
+ul, ol {
+  padding-left: 40px;
+  margin: 0 0 $base-font-size * 1.5 0;
+}
+
+/** TEXTES **/
+
+p {
+  margin: 0 0 $base-font-size * 1.5 0;
+}
+
+i, em {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+a {
+  color: $color-base;
+  transition: all 0.2s;
+
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+/** SELECTION **/
+
+::selection {
+  color: #fff;
+  background: $color-secondary;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: $color-secondary;
+}

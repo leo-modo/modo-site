@@ -1,0 +1,54 @@
+@import 'abstracts/variables';
+
+/**/
+body,
+html {
+    background: #fff !important;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: $color-primary;
+}
+.login form {
+    background: #ffffff;
+}
+.login label {
+    font-size: 16px;
+}
+#login h1 a {
+    width: 100% !important;
+    height: 100px !important;
+    background-image: url(../img/logo.svg) !important;
+    background-size: contain !important;
+    margin: 0 0 25px;
+}
+.login form .forgetmenot {
+    float: none;
+}
+#login form p.forgetmenot {
+    margin-bottom: 16px;
+}
+.login .button-primary {
+    float: none;
+}
+.wp-core-ui .button.button-large {
+    height: 46px;
+    padding: 0 20px 2px;
+}
+.wp-core-ui .button-primary {
+    display: block;
+    width: 100%;
+    padding: 15px 20px 12px;
+    background: $color-primary;
+    border: 1px solid $color-primary;
+    box-shadow: none;
+    text-transform: uppercase;
+    text-shadow: none;
+    transition: all 0.3s;
+}
+.wp-core-ui .button-primary:hover {
+    background: #595959;
+    border: 1px solid #595959;
+    transition: all 0.3s;
+}

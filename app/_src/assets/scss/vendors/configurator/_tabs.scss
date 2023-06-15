@@ -1,0 +1,129 @@
+#configurator {
+
+  .tabs {
+    display: flex;
+
+    @include phone {
+      flex-direction: column;
+    }
+
+    .tab {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+      position: relative;
+
+      flex: 1;
+      height: 70px;
+
+      color: $color-blue;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include phone {
+        height: inherit;
+        padding: 10px;
+      }
+
+      &:first-child {
+
+        &,
+        &:before {
+          border-radius: 4px 0 0 4px;
+
+          @include phone {
+            border-radius: 4px 4px 0 0;
+          }
+        }
+      }
+
+      &:last-child {
+
+        &,
+        &:before {
+          border-radius: 0 4px 4px 0;
+
+          @include phone {
+            border-radius: 0 0 4px 4px;
+          }
+        }
+      }
+
+      &.is-done {
+        background: $color-blue-light;
+
+        .no-touchevents &:hover {
+          background: darken($color-blue-light, 5%);
+          cursor: pointer;
+        }
+
+        & + .is-done {
+          border-left: 1px solid $color-white;
+
+          @include phone {
+            border-top: 1px solid $color-white;
+          }
+        }
+
+        &:before {
+          border-color: #EBF1F6;
+        }
+
+        &:after {
+          @include icons($icons-check);
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+
+          top: 10px;
+          right: 10px;
+
+          width: 15px;
+          height: 15px;
+
+          background: $color-black;
+          border-radius: 15px;
+
+          color: $color-white;
+          font-size: 10px;
+        }
+      }
+
+      &.is-current {
+        z-index: 2;
+
+        color: $color-orange;
+
+        &:before {
+          border-color: $color-orange;
+        }
+      }
+
+      &:before {
+        display: block;
+        position: absolute;
+        z-index: -1;
+
+        top: 0;
+        right: -1px;
+        bottom: 0;
+        left: 0;
+
+        border: 1px solid $color-blue;
+
+        content: '';
+      }
+
+      span {
+        display: block;
+
+        font-weight: normal;
+      }
+    }
+  }
+}

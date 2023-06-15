@@ -1,0 +1,422 @@
+#header-site .navigation nav > div {
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+
+    // Menu parent //
+    &.menu-item-has-children {
+
+      &.is-inline {
+
+        & > ul > li {
+          & > a,
+          & > span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 60px;
+
+            padding: 0 50px;
+
+            @include desktop {
+              justify-content: flex-start;
+
+              height: inherit;
+
+              padding: 15px 0;
+            }
+          }
+        }
+      }
+
+      &.is-opened {
+
+        & > a > .expand:after {
+          transform: rotate(-90deg);
+        }
+
+        & > ul,
+        & > .menu-product-cat {
+          display: block;
+        }
+      }
+
+      & > a,
+      & > span {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        position: relative;
+
+        .touchevents & {
+          flex-direction: row-reverse;
+        }
+
+        & > .expand {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          z-index: 2;
+
+          width: 40px;
+          height: 40px;
+
+          &:after {
+            @include icons($icons-arrow);
+
+            transform: rotate(90deg);
+
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  // Niveau 1
+  & > ul {
+    display: flex;
+
+    @include desktop {
+      flex-direction: column;
+    }
+
+    & > li {
+      position: relative;
+
+      .no-touchevents &:hover {
+
+        & > a,
+        & > span {
+          font-weight: bold;
+
+          &:after {
+            display: block;
+            position: absolute;
+
+            right: 30px;
+            bottom: 0;
+            left: 30px;
+
+            height: 4px;
+
+            background: $color-base;
+
+            content: '';
+
+            @include desktop {
+              display: none;
+            }
+          }
+        }
+
+        & > ul {
+          display: block;
+        }
+
+        &.is-inline {
+
+          ul {
+            display: flex;
+          }
+        }
+      }
+
+      &:last-child > a,
+      &:last-child > span {
+        font-weight: bold;
+      }
+
+      & > a,
+      & > span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0 30px;
+
+        height: 90px;
+
+        color: $color-base;
+        font-size: 16px;
+        text-transform: uppercase;
+
+        @include desktop {
+          justify-content: flex-start;
+
+          height: auto;
+
+          padding: 15px 0;
+        }
+      }
+
+      & > ul {
+        display: none;
+        position: absolute;
+        z-index: 1;
+
+        top: 90px;
+
+        @include desktop {
+          flex-direction: column;
+          position: relative;
+
+          top: inherit;
+
+          width: 100%;
+
+          padding: 10px 0;
+
+        }
+
+        &:after {
+          display: block;
+          position: absolute;
+          z-index: -1;
+
+          width: 5000px;
+
+          top: 0;
+          bottom: 0;
+          left: -2000px;
+
+          background: $color-primary;
+
+          content: '';
+        }
+
+        & > li {
+
+          .no-touchevents &:hover {
+
+            & > a {
+              font-weight: bold;
+            }
+
+            .menu-product-cat {
+              display: flex;
+            }
+          }
+
+          & > a {
+            display: block;
+
+            padding: 15px 0;
+
+            color: $color-white;
+            line-height: 1em;
+            white-space: nowrap;
+
+            @include desktop {
+              height: auto;
+
+              padding: 10px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Sous menu categories produit
+.menu-product-cat {
+  display: none;
+  justify-content: space-between;
+  position: absolute;
+
+  width: $max-site-width;
+
+  top: 60px;
+  left: -200px;
+  padding: 60px 0;
+
+  @include large-desktop {
+    width: $large-desktop-width;
+  }
+
+  @include desktop {
+    position: relative;
+
+    top: inherit;
+    left: inherit;
+    padding: 0 0 30px 0;
+
+    width: 100%;
+  }
+
+  &:after {
+    display: block;
+    position: absolute;
+    z-index: -1;
+
+    width: 5000px;
+
+    top: 0;
+    bottom: 0;
+    left: -2000px;
+
+    background: $color-blue-alt;
+
+    content: '';
+  }
+
+  .categories {
+    flex: 1;
+
+    .title {
+      margin-bottom: 25px;
+
+      font-weight: bold;
+      text-transform: uppercase;
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .terms {
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        width: 48%;
+
+        @include phone {
+          width: 100%;
+        }
+      }
+
+      a {
+        display: inline-block;
+
+        padding: 7px 0;
+
+        line-height: 1.1em;
+      }
+    }
+  }
+
+  .products {
+    display: flex;
+    flex: 1;
+
+    @include desktop {
+      display: none;
+    }
+
+    .product {
+      max-width: 330px;
+
+      & + .product {
+        margin-left: 5px;
+      }
+
+      .img {
+        width: 329px;
+        height: 284px;
+
+        margin-bottom: 15px;
+
+        background: $color-blue-light;
+        border-radius: 12px;
+
+        img {
+          display: block;
+
+          width: 100%;
+          height: 100%;
+
+          border-radius: 12px;
+          object-fit: cover;
+        }
+      }
+
+      .infos {
+        text-align: center;
+      }
+
+      .name {
+        margin-bottom: 5px;
+
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .brand {
+        color: $color-white;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+/** FOOTER **/
+#footer-site nav div {
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+
+    ul,
+    .menu-product-cat {
+      display: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    .no-touchevents &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+#footer-site .legals nav div ul {
+  display: flex;
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+
+    margin: 0 8px 0 0;
+
+    font-size: 12px;
+
+    & + li {
+
+      &:before {
+        display: block;
+
+        margin-right: 8px;
+
+        content: '-';
+      }
+    }
+  }
+
+  a, span {
+    font-size: 12px;
+  }
+}

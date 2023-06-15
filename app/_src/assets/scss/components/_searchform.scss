@@ -1,0 +1,47 @@
+#searchform_block {
+    #searchform {
+        display: flex;
+        align-items: center;
+
+        #s {
+            border: none;
+
+            height: 40px;
+
+            background: none;
+            border-radius: none;
+
+            @include tablet {
+                max-width: 535px;
+            }
+
+            @include phone {
+                display: none;
+                max-width: 88%;
+
+                &.is-visible {
+                    display: block;
+                }
+            }
+        }
+
+        button {
+            display: block;
+
+            padding: 0;
+
+            border: none;
+            background: #fff;
+            border-radius: 0;
+
+            &:after {
+                color: $color-blue;
+                //@include icons($icons-search);
+                font-size: 30px;
+                line-height: 1em;
+
+                background: #fff;
+            }
+        }
+    }
+}

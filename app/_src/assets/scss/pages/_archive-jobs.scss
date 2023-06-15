@@ -1,0 +1,116 @@
+#archive-jobs {
+
+  .content,
+  .items {
+
+  }
+
+  .content {
+    margin-bottom: 50px;
+  }
+
+  .items {
+    margin-bottom: 75px;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+
+    min-height: 125px;
+
+    padding: 0 90px 0 110px;
+
+    border: 1px solid rgba($color-base, 0.21);
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    .no-touchevents &:hover {
+      box-shadow: 0 0 10px rgba($color-base, 0.1);
+    }
+
+    &:after {
+      @include icons($icons-arrow-thin);
+
+      display: flex;
+      justify-content: flex-end;
+
+      width: 5%;
+
+      font-size: 30px;
+    }
+
+    & + .item {
+      margin-top: 20px;
+    }
+
+    .contracts {
+      display: flex;
+      justify-content: center;
+
+      width: 15%;
+
+      span {
+        display: block;
+        padding: 10px 15px;
+
+        border-radius: 20px;
+        border: 1px solid $color-base;
+
+        color: $color-base;
+        font-weight: bold;
+        line-height: 1em;
+        text-align: center;
+
+      }
+    }
+
+    .name {
+      width: 41%;
+      margin: 0;
+    }
+
+    .city,
+    .date {
+      display: flex;
+      align-items: center;
+
+      width: 22%;
+
+      color: $color-base;
+
+      &:before {
+        @include sprite($icon-city);
+
+        content: '';
+      }
+    }
+
+    .date:before {
+      @include sprite($icon-calendar);
+    }
+  }
+
+  .form {
+    padding: 45px 0 60px;
+
+    background: $color-orange-light;
+
+    .wrap {
+
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="email"],
+    input[type="file"],
+    textarea,
+    .ginput_container_fileupload {
+      background: $color-white;
+    }
+  }
+}

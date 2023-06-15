@@ -1,0 +1,31 @@
+html {
+    min-height: 100%;
+}
+body {
+    height: 100%;
+    background: $color-primary;
+}
+
+#wrapper-site {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    background: $color-white;
+}
+
+@include tablet {
+    body.admin-bar {
+        margin-top: -32px !important;
+
+        #wpadminbar {
+            display: none !important;
+        }
+    }
+}
+
+@include responsive('782px') {
+    body.admin-bar {
+        margin-top: -46px !important;
+    }
+}

@@ -1,0 +1,60 @@
+#page-partners {
+
+
+  margin-bottom: 150px;
+
+  .tabs {
+    margin: 55px 0;
+  }
+
+  .tabs-content {
+
+    & > .description {
+      margin-bottom: 65px;
+    }
+  }
+
+  .partners {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include desktop {
+        justify-content: center;
+    }
+  }
+
+  .partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 330px;
+
+    margin: 0 6px 6px 0;
+    padding: 30px;
+
+    border: 1px solid #C4CAD0;
+    border-radius: 10px;
+
+    text-align: center;
+
+    @include large-desktop-min {
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+
+    @include large-desktop-only {
+      width: 310px;
+    }
+
+    .logo {
+      margin-bottom: 20px;
+
+      img {
+        display: block;
+      }
+    }
+  }
+}

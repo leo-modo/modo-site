@@ -1,0 +1,93 @@
+%title-primary {
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  margin: 0 0 $base-font-size * 1.5 0;
+
+  color: $color-base;
+  font-family: $font-primary;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+%title-secondary {
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  margin: 0 0 $base-font-size * 2 0;
+
+  color: $color-base;
+  font-family: $font-primary;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+%title-tertiary {
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  margin: 0 0 $base-font-size * 1.5 0;
+
+  color: $color-blue;
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+%title-fourth {
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  margin: 0 0 $base-font-size * 1.5 0;
+
+  color: $color-secondary;
+  font-family: $font-primary;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1em;
+}
+
+%title-fifth {
+  @extend %title-fourth;
+}
+
+h1,
+.is-h1 {
+  @extend %title-primary;
+}
+
+h2,
+.is-h2 {
+  @extend %title-secondary;
+}
+
+h3,
+.is-h3 {
+  @extend %title-tertiary;
+}
+
+h4,
+.is-h4 {
+  @extend %title-fourth;
+}
+
+h5,
+.is-h5 {
+  @extend %title-fifth;
+}
+
+h6,
+.is-h6 {
+  @extend %title-fifth;
+}
+
+

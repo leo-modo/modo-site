@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+// Configuration and helpers
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/iconsfont";
+@import "abstracts/iconsimg";
+
+@import "components/titles";
+
+@import "vendors/configurator/layout";
+@import "vendors/configurator/tabs";
+@import "vendors/configurator/selection";
+@import "vendors/configurator/resume";

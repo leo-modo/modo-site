@@ -1,11 +1,12 @@
 # Files #
 .DS_Store
 local-xdebuginfo.php
+wp-content/advanced-cache.php
 
 # Folders #
 .idea
 node_modules
-vendors
+vendor
 
 uploads
 

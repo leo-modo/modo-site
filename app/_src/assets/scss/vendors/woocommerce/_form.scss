@@ -1,0 +1,21 @@
+// Label
+.woocommerce form .form-row label {
+  line-height: 1em;
+  margin: 0 0 5px 0;
+}
+
+// Row
+.woocommerce form .form-row {
+  margin-bottom: 20px;
+}
+
+// Formuliare de connexion
+.woocommerce form.login {
+  max-width: 450px;
+
+  margin: 0 auto 100px;
+
+  button {
+    margin-top: 30px;
+  }
+}

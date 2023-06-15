@@ -1,0 +1,84 @@
+#page-configurator {
+
+  #header-site {
+
+    .logos {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-bis {
+      width: 200px;
+
+      margin-left: 50px;
+
+      img {
+        display: block;
+
+        max-width: 100%;
+      }
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+
+      height: 100%;
+
+      padding-right: 50px;
+
+      border-right: 1px solid #C4CAD0;
+
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    }
+  }
+
+  #container-site {
+    z-index: 1;
+
+    padding: 50px 0;
+  }
+
+  .intro {
+
+    display: flex;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    .image {
+      flex-shrink: 0;
+
+      max-width: 560px;
+
+      @include tablet {
+        margin-top: 50px;
+      }
+
+      img {
+        display: block;
+
+        max-width: 100%;
+        height: auto;
+
+        border-radius: 12px;
+      }
+    }
+
+    .content {
+      padding-right: 120px;
+
+      @include tablet {
+          padding: 0;
+      }
+    }
+  }
+}
+
+.page-template-page-configurator {
+  background: $color-white;
+}

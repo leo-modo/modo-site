@@ -1,0 +1,67 @@
+.woocommerce-cart .wc-proceed-to-checkout {
+
+  &:last-child {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  a.checkout-button.build-quote-button {
+    width: auto;
+    height: inherit;
+
+    border: none;
+
+    color: $color-blue;
+    text-transform: none;
+    font-size: $base-font-size;
+
+    .no-touchevents &:hover {
+        background: none;
+
+      color: $color-secondary;
+    }
+  }
+}
+
+.woocommerce-cart-form.wc-quote-form {
+
+
+  .product-thumbnail {
+    display: none;
+  }
+
+  .product-name {
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .wc_quote_update_quote_btn {
+    @extend %btn-small;
+  }
+
+  .cart_totals {
+    display: flex;
+    justify-content: center;
+    float: none;
+
+    width: 100%;
+
+    margin: 20px 0 0 ;
+  }
+}
+
+.wc_quote_fields {
+  max-width: 500px;
+
+  margin: 0 auto;
+
+  .form-group {
+    display: block;
+  }
+
+  input {
+    border: none !important;
+  }
+}

@@ -1,0 +1,167 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$flou-1-name: 'flou-1';
+$flou-1-x: 444px;
+$flou-1-y: 0px;
+$flou-1-offset-x: -444px;
+$flou-1-offset-y: 0px;
+$flou-1-width: 303px;
+$flou-1-height: 316px;
+$flou-1-total-width: 747px;
+$flou-1-total-height: 644px;
+$flou-1-image: '../icons/img/iconsimg.png';
+$flou-1: (444px, 0px, -444px, 0px, 303px, 316px, 747px, 644px, '../icons/img/iconsimg.png', 'flou-1', );
+$flou-2-name: 'flou-2';
+$flou-2-x: 515px;
+$flou-2-y: 354px;
+$flou-2-offset-x: -515px;
+$flou-2-offset-y: -354px;
+$flou-2-width: 149px;
+$flou-2-height: 155px;
+$flou-2-total-width: 747px;
+$flou-2-total-height: 644px;
+$flou-2-image: '../icons/img/iconsimg.png';
+$flou-2: (515px, 354px, -515px, -354px, 149px, 155px, 747px, 644px, '../icons/img/iconsimg.png', 'flou-2', );
+$flou-3-name: 'flou-3';
+$flou-3-x: 0px;
+$flou-3-y: 0px;
+$flou-3-offset-x: 0px;
+$flou-3-offset-y: 0px;
+$flou-3-width: 444px;
+$flou-3-height: 354px;
+$flou-3-total-width: 747px;
+$flou-3-total-height: 644px;
+$flou-3-image: '../icons/img/iconsimg.png';
+$flou-3: (0px, 0px, 0px, 0px, 444px, 354px, 747px, 644px, '../icons/img/iconsimg.png', 'flou-3', );
+$icon-calendar-name: 'icon-calendar';
+$icon-calendar-x: 664px;
+$icon-calendar-y: 354px;
+$icon-calendar-offset-x: -664px;
+$icon-calendar-offset-y: -354px;
+$icon-calendar-width: 74px;
+$icon-calendar-height: 78px;
+$icon-calendar-total-width: 747px;
+$icon-calendar-total-height: 644px;
+$icon-calendar-image: '../icons/img/iconsimg.png';
+$icon-calendar: (664px, 354px, -664px, -354px, 74px, 78px, 747px, 644px, '../icons/img/iconsimg.png', 'icon-calendar', );
+$icon-city-name: 'icon-city';
+$icon-city-x: 0px;
+$icon-city-y: 566px;
+$icon-city-offset-x: 0px;
+$icon-city-offset-y: -566px;
+$icon-city-width: 74px;
+$icon-city-height: 78px;
+$icon-city-total-width: 747px;
+$icon-city-total-height: 644px;
+$icon-city-image: '../icons/img/iconsimg.png';
+$icon-city: (0px, 566px, 0px, -566px, 74px, 78px, 747px, 644px, '../icons/img/iconsimg.png', 'icon-city', );
+$icon-email-name: 'icon-email';
+$icon-email-x: 204px;
+$icon-email-y: 354px;
+$icon-email-offset-x: -204px;
+$icon-email-offset-y: -354px;
+$icon-email-width: 160px;
+$icon-email-height: 167px;
+$icon-email-total-width: 747px;
+$icon-email-total-height: 644px;
+$icon-email-image: '../icons/img/iconsimg.png';
+$icon-email: (204px, 354px, -204px, -354px, 160px, 167px, 747px, 644px, '../icons/img/iconsimg.png', 'icon-email', );
+$icon-phone-name: 'icon-phone';
+$icon-phone-x: 364px;
+$icon-phone-y: 354px;
+$icon-phone-offset-x: -364px;
+$icon-phone-offset-y: -354px;
+$icon-phone-width: 151px;
+$icon-phone-height: 158px;
+$icon-phone-total-width: 747px;
+$icon-phone-total-height: 644px;
+$icon-phone-image: '../icons/img/iconsimg.png';
+$icon-phone: (364px, 354px, -364px, -354px, 151px, 158px, 747px, 644px, '../icons/img/iconsimg.png', 'icon-phone', );
+$icon-question-name: 'icon-question';
+$icon-question-x: 0px;
+$icon-question-y: 354px;
+$icon-question-offset-x: 0px;
+$icon-question-offset-y: -354px;
+$icon-question-width: 204px;
+$icon-question-height: 212px;
+$icon-question-total-width: 747px;
+$icon-question-total-height: 644px;
+$icon-question-image: '../icons/img/iconsimg.png';
+$icon-question: (0px, 354px, 0px, -354px, 204px, 212px, 747px, 644px, '../icons/img/iconsimg.png', 'icon-question', );
+$spritesheet-width: 747px;
+$spritesheet-height: 644px;
+$spritesheet-image: '../icons/img/iconsimg.png';
+$spritesheet-sprites: ($flou-1, $flou-2, $flou-3, $icon-calendar, $icon-city, $icon-email, $icon-phone, $icon-question, );
+$spritesheet: (747px, 644px, '../icons/img/iconsimg.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

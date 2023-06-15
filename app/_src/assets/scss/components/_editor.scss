@@ -1,0 +1,82 @@
+blockquote {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    min-height: 160px;
+
+    margin: 60px 0 50px 0;
+    padding: 45px 60px;
+
+    //background: url("../img/bg-quote.png") no-repeat;
+    background-size: 100% 100%;
+
+    &:after {
+        display: block;
+        position: absolute;
+
+        top: -40px;
+        right: -70px;
+
+        //@include sprite($illu-quote);
+
+        content: "";
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+img {
+
+    &.alignleft {
+        display: block;
+
+        float: left;
+
+        margin: 0 30px 30px 0;
+
+        @include phone {
+            float: none;
+
+            margin: 0 0 30px 0;
+        }
+    }
+
+    &.alignright {
+        display: block;
+
+        float: right;
+
+        margin: 0 0 30px 30px;
+
+        @include phone {
+            float: none;
+
+            margin: 0 0 30px 0;
+        }
+
+    }
+
+    &.aligncenter {
+        display: block;
+        
+        margin: 0 auto 30px;
+    }
+}
+
+/** Galerie **/
+.gallery img {
+    border: none !important;
+}
+
+/** Container **/
+.is-editor {
+    overflow: auto;
+    zoom: 1;
+
+    & > :last-child {
+        margin: 0;
+    }
+}

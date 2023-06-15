@@ -1,0 +1,36 @@
+.breadcrumb {
+
+
+    margin-top: 25px;
+    margin-bottom: 35px;
+
+    color: $color-gray;
+    font-size: 12px;
+
+    @include phone {
+        display: none;
+    }
+
+    ol {
+        display: flex;
+        list-style: none;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        color: $color-gray;
+        text-decoration: none;
+
+        .no-touchevents &:hover {
+            color: $color-blue;
+        }
+    }
+
+    .separator {
+        display: inline-block;
+
+        margin: 0 5px;
+    }
+}

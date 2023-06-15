@@ -1,0 +1,19 @@
+#container-site {
+    @include wrapper;
+
+    position: relative;
+    z-index: -1;
+
+    @include phone {
+        padding-top: 40px;
+    }
+
+    &:after {
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+        font-size: 0;
+        content: " ";
+    }
+}

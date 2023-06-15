@@ -1,0 +1,109 @@
+form {
+  width: 100%;
+}
+
+fieldset {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  & + fieldset {
+    margin-top: 20px;
+  }
+}
+
+legend {
+  color: $color-blue;
+}
+
+label {
+  display: block;
+
+  width: 100%;
+
+  margin: 0 0 10px 0;
+
+  color: $color-base;
+  font-weight: normal;
+  line-height: 1em;
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="email"],
+input[type="file"],
+textarea,
+.ginput_container_fileupload,
+.woocommerce form .form-row select,
+#address_form .address-select,
+.ginput_container_select {
+  display: block;
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  height: 45px;
+
+  padding: 0 10px;
+
+  background: rgba($color-orange,0.08);
+  border: none;
+  border-radius: 7px;
+  transition: all $anim-duration;
+
+  font-size: 14px;
+
+  .is-error & {
+    border-color: $color-red-light;
+  }
+}
+
+input[type="file"] {
+  height: 30px;
+  background: none;
+}
+
+::placeholder {
+  color: $color-primary;
+  font-size: 14px;
+}
+
+select {
+  position: relative;
+
+  height: 100%;
+
+  background: none;
+  border: none;
+
+  option {
+    color: $color-primary;
+  }
+}
+
+textarea {
+  width: 100%;
+  max-width: inherit;
+  height: 170px;
+
+  padding: 10px;
+
+  resize: vertical;
+}
+
+input[type="file"] {
+  color: $color-primary;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+  @extend %btn;
+}

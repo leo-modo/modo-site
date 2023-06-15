@@ -1,0 +1,79 @@
+.pagination {
+  margin: 30px 0 0 0;
+
+  .pagination-wrap {
+
+
+    &.is-number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a,
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 30px;
+        height: 30px;
+
+        color: $color-blue;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      span {
+        color: $color-base;
+
+        &.is-disabled {
+          color: $color-base;
+        }
+      }
+
+      .prev,
+      .next {
+        width: 45px;
+        height: 45px;
+
+        padding: 0;
+
+        font-size: 0;
+
+        &:after {
+          @include icons($icons-arrow);
+          font-size: 20px;
+        }
+      }
+
+      .prev {
+
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &.is-more {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        @extend %btn-link;
+
+        &.is-loading:after {
+          display: inline-flex;
+          @include icons($icons-loading);
+          animation: rotate 3s infinite linear;
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg)
+  }
+}

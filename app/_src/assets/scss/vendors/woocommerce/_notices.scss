@@ -1,0 +1,28 @@
+.woocommerce {
+  .woocommerce-info,
+  .woocommerce-error,
+  .woocommerce-message {
+    border: none;
+    border-radius: 10px;
+
+    .button {
+      @extend %btn;
+      @extend %btn-small;
+
+      border: none;
+      background: $color-white;
+    }
+  }
+}
+
+.woocommerce-message,
+.woocommerce-notice.woocommerce-notice--success{
+  background: $color-green;
+}
+
+.woocommerce-info {
+  background: $color-blue-light;
+}
+.woocommerce-error {
+  background: $color-red-light;
+}

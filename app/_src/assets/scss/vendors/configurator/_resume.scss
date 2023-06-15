@@ -1,0 +1,77 @@
+#configurator .resume {
+  display: none;
+
+  &.is-active {
+    display: flex;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  & > * {
+    flex: 1;
+  }
+
+  .title {
+    @extend %title-primary;
+
+    margin-bottom: 30px;
+  }
+
+  .images {
+    margin-bottom: 102px;
+  }
+
+  .items {
+    max-width: 400px;
+  }
+
+  .item {
+    display: flex;
+
+    & + .item {
+      margin-top: 30px;
+      padding-top: 30px;
+
+      border-top: 1px solid $color-blue;
+    }
+
+    & > * {
+      flex: 1;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .label {
+      color: $color-blue;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .form {
+
+    @include tablet {
+      margin-top: 50px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="email"],
+    input[type="file"],
+    textarea,
+    .ginput_container_fileupload,
+    .woocommerce form .form-row select,
+    #address_form .address-select,
+    .ginput_container_select {
+      background: $color-blue-light;
+    }
+  }
+}

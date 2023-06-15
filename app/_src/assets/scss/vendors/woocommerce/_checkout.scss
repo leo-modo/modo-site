@@ -1,0 +1,20 @@
+.woocommerce-checkout #payment {
+  background: $color-blue-light;
+}
+
+#wcms_set_addresses {
+  @extend %btn-small;
+}
+
+#shipping_addresses {
+  .no_shipping_address, .ship_address {
+    background: $color-blue-light;
+    border: none;
+
+    .ms_shipping_note {
+      background: $color-white;
+
+      height: 70px;
+    }
+  }
+}

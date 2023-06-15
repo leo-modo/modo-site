@@ -1,4 +1,6 @@
 <?php
+define( 'WP_CACHE', false ); // Added by WP Rocket
+
 /**
  * The base configuration for WordPress
  *
@@ -67,7 +69,7 @@ define('NONCE_SALT',       'fOhc0k9vLaBXGq/Ws/1EIYyyW2hje72FfH5xAQMbtLJRdGYIZe9m
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = 'wp_';
+$table_prefix = 'modo_';
 
 
 /* Add any custom values between this line and the "stop editing" line. */
@@ -87,7 +89,7 @@ $table_prefix = 'wp_';
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 if ( ! defined( 'WP_DEBUG' ) ) {
-	define( 'WP_DEBUG', false );
+	define( 'WP_DEBUG', true );
 }
 
 define( 'WP_ENVIRONMENT_TYPE', 'local' );

@@ -1,0 +1,146 @@
+#archive-product {
+  display: flex;
+
+  margin-bottom: 50px;
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  .left {
+    flex-basis: 330px;
+    flex-shrink: 0;
+
+    @include tablet {
+      width: 100%;
+      flex-basis: inherit;
+
+      margin-bottom: 30px;
+    }
+  }
+
+  .right {
+
+  }
+
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include phone {
+      justify-content: center;
+    }
+
+    .teaser-product {
+      margin: 0 10px 20px 0;
+
+      @include large-desktop-min {
+        width: 303px;
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+
+      @include desktop {
+        width: 310px;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+
+      @include tablet {
+        width: 284px;
+      }
+
+      @include phone {
+        width: 100%;
+        max-width: 330px;
+
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+
+  .filter {
+    max-width: 220px;
+
+    padding: 30px 0;
+
+    border-bottom: 1px solid $color-blue-alt;
+
+    @include tablet {
+      max-width: 100%;
+    }
+
+    &.is-opened {
+
+      & > .title:after {
+        content: '-';
+      }
+
+      .items {
+        display: block;
+      }
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin: 0;
+
+      cursor: pointer;
+
+      color: $color-blue;
+      font-weight: bold;
+      font-size: 16px;
+      text-transform: uppercase;
+
+      &:after {
+        content: '+';
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 1em;
+      }
+    }
+
+    .items {
+      display: none;
+
+      margin-top: 30px;
+
+      li {
+        padding: 5px 0;
+
+        list-style: none;
+      }
+
+      a {
+        display: block;
+        line-height: 1.2em;
+        text-decoration: none;
+      }
+
+      & > ul {
+        margin: 0;
+        padding: 0;
+
+        ul {
+          margin: 0;
+          padding: 5px 0 0 25px;
+
+          a {
+            color: $color-blue;
+
+            .no-touchevents &:hover {
+              color: $color-secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}

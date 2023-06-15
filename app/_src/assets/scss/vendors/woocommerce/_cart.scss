@@ -1,0 +1,42 @@
+// Coupon
+.woocommerce table.cart td.actions .coupon {
+  display: flex;
+  align-items: center;
+
+  input,
+  button {
+    height: 45px;
+
+    text-transform: none;
+  }
+
+  .input-text {
+    width: 200px;
+
+    padding: 0 15px;
+
+    background: none;
+    border: 1px solid $color-blue-alt;
+    border-radius: 3px;
+  }
+}
+
+// Actions
+.woocommerce-page table.cart td.actions {
+  vertical-align: middle;
+}
+
+// Input quantity
+.woocommerce .quantity .qty {
+  width: 60px;
+  height: 40px;
+
+  padding: 0 10px;
+
+  background: none;
+  border: 1px solid $color-blue;
+}
+
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+  margin: 0;
+}

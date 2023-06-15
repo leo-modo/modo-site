@@ -1,0 +1,39 @@
+{
+  "name": "gulp-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "prod": "gulp production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^4.0.1",
+    "gulp-iconfont": "^10.0.3",
+    "gulp-iconfont-css": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-install": "^1.1.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp.spritesmith": "^6.11.0",
+    "merge-stream": "^2.0.0",
+    "require-reload": "^0.2.2",
+    "sass": "^1.62.1"
+  },
+  "dependencies": {
+
+  }
+}

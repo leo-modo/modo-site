@@ -1,0 +1,177 @@
+%btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  z-index: 1;
+
+  height: 50px;
+
+  padding: 0 25px;
+
+  background: none;
+  border: 1px solid $color-orange;
+  border-radius: 4px;
+
+  color: $color-orange;
+  font-size: 13px;
+  font-family: $font-secondary;
+  font-weight: 500;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: all $anim-duration;
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  .no-touchevents &:hover {
+    background: $color-orange;
+
+    color: $color-white;
+  }
+
+  &:disabled {
+    background-color: $color-blue;
+    cursor: not-allowed;
+  }
+}
+
+%btn-small {
+  height: 35px;
+
+  padding: 0 15px;
+}
+
+%btn-secondary {
+  border-color: $color-primary;
+
+  color: $color-primary;
+
+  .no-touchevents &:hover {
+    background: $color-primary;
+
+    color: $color-white;
+  }
+}
+
+%btn-link {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0;
+
+  border: none;
+
+  color: $color-base;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: none;
+
+  .no-touchevents &:hover {
+      background: none;
+
+    color: $color-blue;
+
+    &:after {
+      background: $color-blue;
+    }
+  }
+
+  &:after {
+    @include icons($icons-arrow);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    margin-left: 10px;
+
+    background: $color-base;
+    border-radius: 30px;
+    transition: all $anim-duration;
+
+    color: $color-white;
+    font-size: 15px;
+  }
+}
+
+%btn-full {
+  background: $color-base;
+  border: none;
+
+  color: $color-white;
+  font-weight: bold;
+
+  .no-touchevents &:hover {
+    background: $color-orange;
+  }
+}
+
+%btn-small {
+  height: 30px;
+
+  font-size: 12px;
+}
+
+/** classes **/
+.btn,
+a.btn {
+  @extend %btn;
+
+  &.is-secondary {
+    @extend %btn-secondary;
+  }
+
+  &.is-link {
+    @extend %btn-link;
+  }
+
+  &.is-full {
+    @extend %btn-full;
+  }
+
+  &.is-small {
+    @extend %btn-small;
+  }
+}
+
+/** Button UP **/
+#button-up {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+
+  bottom: 20px;
+  right: 20px;
+
+  width: 50px;
+  height: 50px;
+
+  background: linear-gradient(180deg, #ddf2fa 0%, #b9e0f2 100%);
+  border-radius: 30px;
+
+  &.is-active {
+    display: flex;
+  }
+
+  &:after {
+    display: block;
+
+    //@include icons($icons-arrow);
+    color: $color-blue;
+    font-size: 20px;
+    line-height: 1em;
+
+    transform: rotate(180deg);
+  }
+}
